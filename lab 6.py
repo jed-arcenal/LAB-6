@@ -17,18 +17,23 @@ def encoder(encode):
 
 # decode function
 def decoder(decode):
-    pass
+    string = str(decode)
+    decoded_pw = ""
+    for x in string:
+        decoded_pw += str(((int(x) + 10) - 3) % 10)
+    return int(decoded_pw)
 
 
 if __name__ == "__main__":
+    password = 0
     while True:
         menu()
         user_option = int(input("Please enter an option: "))
         if user_option == 1:
             password = input("Please enter your password to encode: ")
-            encoder(password)
+            password = encoder(password)
             print("Your password has been encoded and stored!")
         if user_option == 2:
-            pass
+            print(f"The encoded password is {password} and the original password is {decoder(password)}")
         if user_option == 3:
             break
