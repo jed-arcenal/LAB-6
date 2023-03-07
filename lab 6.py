@@ -6,6 +6,7 @@ def menu():
     print("3. Quit")
 
 
+# Encode function
 def encoder(encode):
     string = str(encode)
     encoded_pw = ""
@@ -14,6 +15,7 @@ def encoder(encode):
     return int(encoded_pw)
 
 
+# decode function
 def decoder(decode):
     pass
 
